@@ -8,3 +8,5 @@ The plugin utilizes:
 - [Firebase](https://firebase.google.com/)
 - [AngularJS](https://angularjs.org/)
     - [AngularFire](https://github.com/firebase/angularfire)
+    
+The plugin only handles the backend at this time.  The output will be limited to just the homepage of the site, so the output will be handled in the [lorainccc[(https://github.com/lorainccc/lorainccc) theme.
