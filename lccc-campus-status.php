@@ -93,10 +93,10 @@ add_action( 'network_admin_notices', 'lc_campus_status_angular_admin_notice' );
 add_action( 'plugins_loaded', 'lc_campus_status_init' );
 
 function lorainccc_campus_status_scripts() {
- wp_enqueue_script('angular-resources', '//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-resource.js', 'angular-core', '20170216', false);
- wp_enqueue_script('firebase-core', '//www.gstatic.com/firebasejs/3.6.9/firebase.js', 'angular-core', '20170216', false);
- wp_enqueue_script('angularfire', '//cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js', 'firebase-core', '20170216', false);
-	wp_enqueue_script('lccc_campus_status_style', plugin_dir_url( __FILE__ ) . 'js/firebase-init.js', 'angularfire', '20170216', false);
+ wp_enqueue_script('angular-resources', '//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-resource.js', array('jquery', 'angular-core'), '20170216', false);
+ wp_enqueue_script('firebase-core', '//www.gstatic.com/firebasejs/3.6.9/firebase.js', array('jquery', 'angular-core'), '20170216', false);
+ wp_enqueue_script('angularfire', '//cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js', array('jquery', 'angular-core', 'firebase-core'), '20170216', false);
+	wp_enqueue_script('firebase-init', plugin_dir_url( __FILE__ ) . 'js/firebase-init.js', array( 'firebase-core', 'angularfire' ), '20170216', false );
 }
 
 add_action ('init','lorainccc_campus_status_scripts');
@@ -105,10 +105,9 @@ add_action ('init','lorainccc_campus_status_scripts');
 
 function lorainccc_campus_status_wp_admin_scripts() {
  // Check and see if the user is and admin or editor.  Load the following js and css if user is and admin.
- if( current_user_can('publish') ){
-  wp_enqueue_script('lc_campus_status_script', plugin_dir_url( __FILE__ ) . 'js/lc-campus-status-admin.js', array( 'jquery' ) );
+  wp_enqueue_script('angular-core', '//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.js', array('jquery'), '20170216', false  );
+  wp_enqueue_script('lc_campus_status_script', plugin_dir_url( __FILE__ ) . 'js/lc-campus-status.js', array( 'jquery', 'angular-core', 'angular-resources', 'firebase-core', 'angularfire' ), '20170216', false );
   wp_enqueue_style('lc_campus_status_styles', plugin_dir_url( __FILE__ ) . 'css/lc-campus-status.css', 40);
- };
 }
 
 add_action( 'admin_enqueue_scripts', 'lorainccc_campus_status_wp_admin_scripts' );
