@@ -73,7 +73,7 @@ class Lccc_Campus_Status_Public {
 		 * class.
 		 */
 
-		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/lccc-campus-status-public.css', array(), $this->version, 'all' );
+		//wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/lccc-campus-status-public.css', array(), $this->version, 'all' );
 
 	}
 
@@ -96,7 +96,7 @@ class Lccc_Campus_Status_Public {
 		 * class.
 		 */
 
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/lccc-campus-status-public.js', array( 'jquery' ), $this->version, false );
+		//wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/lccc-campus-status-public.js', array( 'jquery' ), $this->version, false );
 
 	}
 
