@@ -67,6 +67,7 @@ function lc_campus_status_page() {
        <select class="form-control" ng-model="notify.type" ng-required="notify.active == '1'">
         <option value="exclamation">Emergency (Red)</option>
         <option value="info">Info (Blue)</option>
+        <option value="info-alt">Info (Blue - Bold i)</option>
        </select>
       </div>
       <div><button class="" ng-click="lcUpdateStatus()">Update Notification</button></div>
