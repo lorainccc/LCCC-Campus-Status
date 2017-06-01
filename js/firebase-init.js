@@ -1,9 +1,9 @@
-  // Initialize Firebase
+// Initialize Firebase
   var config = {
-    apiKey: "AIzaSyAJV0CVPnAWLl8G4SAZjY_WV5Ho1fA7muo",
-    authDomain: "lorainccc-campus-status-prod.firebaseapp.com",
-    databaseURL: "https://lorainccc-campus-status-prod.firebaseio.com",
-    storageBucket: "lorainccc-campus-status-prod.appspot.com",
-    messagingSenderId: "486789379878"
+    apiKey: "AIzaSyD1FZh-KK_FJDACf6mdburwccgxPGIkcqg",
+    authDomain: "lorainccc-39418.firebaseapp.com",
+    databaseURL: "https://lorainccc-39418.firebaseio.com",
+    storageBucket: "lorainccc-39418.appspot.com",
+    messagingSenderId: "241528039156"
   };
   firebase.initializeApp(config);

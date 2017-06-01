@@ -62,6 +62,13 @@ function lc_campus_status_page() {
        <label style="font-weight:700;">Notification Additional URL</label>
        <input class="form-control" ng-model="notify.url" placeholder="Read more link." ng-required="notify.active == '1'" size="100" />
       </div>
+      <div style="width:100%; margin: 5px 0;">
+       <label style="font-weight:700;">Notification Type</label>
+       <select class="form-control" ng-model="notify.type" ng-required="notify.active == '1'">
+        <option value="exclamation">Emergency (Red)</option>
+        <option value="info">Info (Blue)</option>
+       </select>
+      </div>
       <div><button class="" ng-click="lcUpdateStatus()">Update Notification</button></div>
      </div>
 
